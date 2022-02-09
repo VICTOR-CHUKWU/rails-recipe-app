@@ -1,0 +1,42 @@
+<div class="container mt-5 p-2">
+<h3 class="text-center mb-3"><%= @recipe.name %></h3>
+<div class="row">
+  <div class="col-8 mb-3">
+  <h3>preparation time: <%= @recipe.preparation_time%></h3>
+  <h3>cooking time: <%= @recipe.cooking_time%></h3>
+  </div>
+  <div class="col-4 text-end mb-3">
+  <button class="btn btn-secondary">Public</button>
+  </div>
+  <div class="col-12 my-3">
+  <p>Procedures</p>
+  <p><%= @recipe.description%></p>
+  </div>
+  <div class="col-12 d-flex justify-content-between align-items-center">
+  <%= link_to "Generate shopping list", shopping_list_index_path,  class: "btn btn-secondary"%>
+  <button class="btn btn-secondary">Add Ingredients</button>
+  </div>
+  <div class="col-12 mt-4">
+  <table class="table table-striped table-bordered border-danger">
+  <thead>
+    <tr>
+       <th scope="col">Food</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Value</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @foods.each do |f| %>
+    <tr>
+      <td><%= f.name %></td>
+      <td><%= f.measurement_unit %></td>
+      <td><%= f.price %></td>
+      <td>Remove  Modify</td>
+    </tr>
+     <%end%>
+  </tbody>
+</table>
+  </div>
+</div>
+</div>
