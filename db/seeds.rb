@@ -17,3 +17,7 @@
   curry = victor.recipes.create!( name: "curry" , preparation_time: "2 hours", cooking_time: "20 minutes", description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", public: false )
   thyme = tufoin.recipes.create!( name: "thyme" , preparation_time: "3 hours", cooking_time: "10 minutes", description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", public: false )
   salt = tolu.recipes.create!( name: "salt" , preparation_time: "4 hours", cooking_time: "30 minutes", description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", public: true )
+
+  tufoin_inventory = tufoin.inventories.create!(name: 'tufoin\'s store')
+  tolu_inventory = tolu.inventories.create!(name: 'tolu\'s store')
+  victor_inventory = victor.inventories.create!(name: 'victor\'s store')
