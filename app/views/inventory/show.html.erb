@@ -1,0 +1,28 @@
+
+<main class="container p-2 mt-4">
+<h2 class="text-center"><%= @user.name %>' store</h2>
+
+<div class="text-end my-2">
+<button class="btn btn-primary">
+Add Food
+</button>
+</div>
+<table class="table table-striped table-bordered border-danger">
+  <thead>
+    <tr>
+       <th scope="col">Food</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @foods.each do |i| %>
+    <tr>
+      <td><%= i.name %></td>
+      <td><%= i.measurement_unit %></td>
+      <td>Remove</td>
+    </tr>
+     <%end%>
+  </tbody>
+</table>
+</main>

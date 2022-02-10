@@ -4,8 +4,9 @@ class InventoryController < ApplicationController
   end
 
   def show
-    # @foods = current_user.foods
+    @foods = current_user.foods
     @inventory = Inventory.find(params[:id])
+    @user = current_user
   end
   
   def destroy
