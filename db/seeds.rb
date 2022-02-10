@@ -22,4 +22,6 @@
 
   tufoin_inventory = tufoin.inventories.create!(name: 'tufoin\'s store')
   tolu_inventory = tolu.inventories.create!(name: 'tolu\'s store')
+  tolu_inventory2 = tolu.inventories.create!(name: 'tolu\'s store2')
+  tolu_inventory3 = tolu.inventories.create!(name: 'tolu\'s store3')
   victor_inventory = victor.inventories.create!(name: 'victor\'s store')
