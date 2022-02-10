@@ -26,6 +26,4 @@
   tolu_inventory3 = tolu.inventories.create!(name: 'tolu\'s store3')
   victor_inventory = victor.inventories.create!(name: 'victor\'s store')
 
-  tolu_inventory.inventory_foods.create!(quantity: 2, food: "rice")
-  tolu_inventory.inventory_foods.create!(quantity: 2, food: "bread")
-  tolu_inventory.inventory_foods.create!(quantity: 2, food: "sweet pawapaw")
+  
