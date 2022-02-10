@@ -34,7 +34,7 @@
       <td><%= f.name %></td>
       <td><%= f.measurement_unit %></td>
       <td><%= f.price %></td>
-      <td>Remove  Modify</td>
+       <td><%=button_to 'Modify Remove', food_path(f.id), :method => :delete, class: 'btn btn-outline-danger'%></td>
     </tr>
      <%end%>
   </tbody>

@@ -20,7 +20,7 @@ Add Food
     <tr>
       <td><%= i.name %></td>
       <td><%= i.measurement_unit %></td>
-      <td>Remove</td>
+      <td><%=button_to 'Delete', food_path(i.id), :method => :delete, class: 'btn btn-outline-danger'%></td>
     </tr>
      <%end%>
   </tbody>

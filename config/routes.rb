@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :recipe, only: %i[index show destroy] do
   end
 
-  resources :inventory, only: %i[index show] do
+  resources :inventory, only: %i[index show destroy] do
   end
 
   resources :shopping_list, only: %i[index] do

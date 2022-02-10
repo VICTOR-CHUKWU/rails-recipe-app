@@ -5,7 +5,7 @@
   <%= link_to inventory_path(i.id) do%>
  <h4><%= i.name %></h4>
  <%end%>
-  <p>Remove</p>
+  <%=button_to 'Remove', inventory_path(i.id), :method => :delete, class: 'btn btn-outline-danger'%>
   </div>
   <div class="col-8">
   <h6>Lorem guy Lorem guy Lorem guy Lorem guy</h6>
