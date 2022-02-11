@@ -29,6 +29,8 @@ gem "jbuilder"
 
 gem "devise"
 
+gem 'cancancan', '~> 1.9'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -54,6 +56,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
+  gem 'rspec-rails', '>= 5.0.2'
+
   gem 'letter_opener'
 end
 
@@ -73,4 +77,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'rails-controller-testing'
 end
