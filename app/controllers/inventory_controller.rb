@@ -16,15 +16,15 @@ class InventoryController < ApplicationController
   def create
     @inventory = current_user.inventories.new(inventory_params)
     if @inventory.save
-      flash[:success] = "you have sucssfully created new food item"  
+      flash[:success] = 'you have sucssfully created new food item'
       redirect_to inventory_index_path
-    else 
-      flash.now[:error]= 'Error.... food could not be added'
+    else
+      flash.now[:error] = 'Error.... food could not be added'
       render :new
 
     end
   end
-  
+
   def destroy
     @inventory = current_user.inventories.find(params[:id])
     @inventory.destroy!

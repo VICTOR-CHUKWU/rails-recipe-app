@@ -10,21 +10,20 @@ class FoodController < ApplicationController
   def create
     @food = current_user.foods.new(food_params)
     if @food.save
-      flash[:success] = "you have sucssfully created new food item"  
+      flash[:success] = 'you have sucssfully created new food item'
       redirect_to root_path
-    else 
-      flash.now[:error]= 'Error.... food could not be added'
+    else
+      flash.now[:error] = 'Error.... food could not be added'
       render :new
 
     end
   end
 
   def destroy
-    @food= current_user.foods.find(params[:id])
+    @food = current_user.foods.find(params[:id])
     @food.destroy!
     flash[:success] = 'You have deleted this food item successfuly!'
     redirect_to root_path
-
   end
 
   private

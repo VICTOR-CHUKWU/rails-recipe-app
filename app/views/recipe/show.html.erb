@@ -4,8 +4,12 @@
   <div class="col-8 mb-3">
   <h3>preparation time: <%= @recipe.preparation_time%></h3>
   <h3>cooking time: <%= @recipe.cooking_time%></h3>
+  <div class="form-check form-switch">
+  <input class="form-check-input col-4 text-end mb-3" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Publict</label>
+</div>
   </div>
-  <div class="col-4 text-end mb-3">
+  <%# <div class=" col-4 text-end mb-3"> %>
   <button class="btn btn-secondary">Public</button>
   </div>
   <div class="col-12 my-3">
