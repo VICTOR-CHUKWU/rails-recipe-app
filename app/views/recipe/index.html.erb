@@ -1,0 +1,16 @@
+<section class="container mt-4 p-2">
+<%=link_to 'Add Recipe', new_recipe_path, class: 'btn btn-primary text-center'%> 
+<% @recipes.each do |f| %>
+<div class="row border border-dark my-3 p-3">
+  <div class="col-4">
+  <%= link_to recipe_path(f.id) do%>
+ <h4><%= f.name %></h4>
+ <%end%>
+ <%=button_to 'Remove', recipe_path(f.id), :method => :delete, class: 'btn btn-outline-danger'%>
+  </div>
+  <div class="col-8">
+  <h6><%= f.description %></h6>
+  </div>
+</div>
+<%end%>
+</section>
