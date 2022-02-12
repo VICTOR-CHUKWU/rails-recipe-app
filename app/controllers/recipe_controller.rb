@@ -15,21 +15,21 @@ class RecipeController < ApplicationController
   def create
     @recipe = current_user.recipes.new(recipe_params)
     if @recipe.save
-      flash[:success] = "you have sucssfully created new recipe item"  
+      flash[:success] = 'you have sucssfully created new recipe item'
       redirect_to recipe_index_path
-    else 
-      flash.now[:error]= 'Error.... recipe could not be added'
+    else
+      flash.now[:error] = 'Error.... recipe could not be added'
       render :new
 
     end
   end
 
   def public
-    @recipes =  current_user.recipes.where(public: true)
+    @recipes = current_user.recipes.where(public: true)
   end
-  
+
   def destroy
-    @recipe= current_user.recipes.find(params[:id])
+    @recipe = current_user.recipes.find(params[:id])
     @recipe.destroy!
     flash[:success] = 'You have deleted this recipe item successfuly!'
     redirect_to recipe_index_path

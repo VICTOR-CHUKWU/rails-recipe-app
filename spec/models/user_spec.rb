@@ -1,19 +1,27 @@
 require 'rails_helper'
 
 describe User, type: :model do
-  describe 'Validaiton tests for user' do
-    subject { User.new(name: 'Vladmir', email: 'vladmir@gmail.com', password: '123456') }
-    before { subject.save }
+  before(:each) do
+    @user = User.new(name: 'Vladmir', email: 'vladmir@gmail.com', password: '123456')
+  end
 
-  it 'Shuold have name present' do
-    subject.name = nil
-    expect(subject).to_not be_valid
+  it 'User should be valid' do
+    expect(@user).to be_valid
   end
-  it 'User should not be valid without a name' do
-    @user.name = nil
-    expect(@user).to_not be_valid
-    @user.name = ''
-    expect(@user).to_not be_valid
+
+  it 'shows user name' do
+    expect(@user.name).to eql('Vladmir')
   end
+
+  it 'check user existence' do
+    expect(@user).to be_valid
+  end
+
+  it 'check if user email exist' do
+    expect(@user.email).to eql('vladmir@gmail.com')
+  end
+
+  it 'check if user has a password' do
+    expect(@user.password).to eql('123456')
   end
 end

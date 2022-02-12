@@ -8,29 +8,17 @@ describe Food, type: :model do
 
   it 'Food should be valid' do
     expect(@soya_beans).to be_valid
-    end
+  end
 
   it 'validates the presence of the measurement unit nil' do
-      @food.measurement_unit = nil
-      expect(@food).to_not be_valid
-    end
+    expect(@soya_beans.measurement_unit).to eql('kg')
+  end
 
-  it 'validates the presence of the price nil' do
-      @food.price = nil
-      expect(@food).to_not be_valid
-    end
-
-  it 'validates the presence of the user nil' do
-      @food.user_id = nil
-      expect(@food).to_not be_valid
-    end
-
-    it 'validates the presence of the user nil' do
-      @food.user_id = nil
-      expect(@food).to_not be_valid
-      end
+  it 'price of food is present' do
+    expect(@soya_beans.price).to eql 3
+  end
 
   it 'validates the food name match' do
-      expect(@food.name).to eq "Food 1"
-    end
+    expect(@soya_beans.name).to eql('Soya Beans')
+  end
 end
