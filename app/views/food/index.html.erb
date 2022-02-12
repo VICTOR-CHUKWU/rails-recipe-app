@@ -1,4 +1,27 @@
-<h1>Food#index</h1>
-<p>Find me in app/views/food/index.html.erb</p>
 
+<main class="container p-2 mt-4">
 
+<div class="text-end my-2">
+<%=link_to 'Add Food', new_food_path, class: 'btn btn-primary'%> 
+</div>
+<table class="table table-striped table-bordered border-dark">
+  <thead>
+    <tr>
+       <th scope="col">Food</th>
+      <th scope="col">Measurement_unit</th>
+      <th scope="col">Unit-Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @foods.each do |f| %>
+    <tr>
+      <td><%= f.name %></td>
+      <td><%= f.measurement_unit %></td>
+      <td><%= f.price %></td>
+      <td><%=button_to 'Delete', food_path(f.id), :method => :delete, class: 'btn btn-outline-danger'%></td>
+    </tr>
+     <%end%>
+  </tbody>
+</table>
+</main>
