@@ -32,4 +32,3 @@ class FoodController < ApplicationController
     params.require(:food).permit(:name, :measurement_unit, :price)
   end
 end
-# @todo = .new(params.require(:todo).permit(:title, :description, :due_date))
